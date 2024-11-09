@@ -4,18 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StorecategoryRequest;
 use App\Http\Requests\UpdatecategoryRequest;
-use App\Models\Category;
+use App\Models\category;
 
 class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index(): JsonResponse
-{
-    $result = Category::all();
-    return response()->json($result);
-}
+    public function index()
+    {
+        $result = Category::all();
+        return response()->json($result);
+    }
 
     /**
      * Show the form for creating a new resource.
