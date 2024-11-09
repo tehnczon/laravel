@@ -11,10 +11,11 @@ class CategoryController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
-        //
-    }
+    public function index(): JsonResponse
+{
+    $result = Category::all();
+    return response()->json($result);
+}
 
     /**
      * Show the form for creating a new resource.
